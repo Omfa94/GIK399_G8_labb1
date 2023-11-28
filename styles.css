@@ -53,9 +53,8 @@ body {
     cursor: pointer;
   }
   
-  .empty-div {
+  .empty_div {
     margin-top: 20px;
-    border: 1px dashed #ccc;
     height: 50px; 
     border: 1px solid #1e1c1c;
   }
