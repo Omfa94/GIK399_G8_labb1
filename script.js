@@ -1,45 +1,77 @@
-const checkbox = document.getElementById("divStyle");
+//Uppgift 4
 
-//det kommer att hämta alla element med klassen 'textfield'
+const box = document.getElementById("divStyle");
+
+//hämta alla element med klassen 'textfield'
 const textfields = document.querySelectorAll(".textfield");
 
-// Detta kommer att hämta en HTMLCollection av alla element med klassen button
-const btn = document.getElementsByClassName("button");
+// hämta en HTMLCollection av alla element med klassen button
 
-// Detta kommer att hämta första elementet med klassen empty_div
+const buttons = document.getElementsByTagName("button");
+
+//hämta första elementet med klassen empty_div
 const emptyDiv = document.querySelector(".empty_div");
 
-
-//eventlyssnare till alla textfields
-textfields.forEach((field) => field.addEventListener("change", handleInputChange));
+// uppgifft 5
 function handleInputChange(e) {
     // Skriv ut event.target till konsolen
     console.log('Event target:', e.target);
-    const inputName = e.target.name;    
-    console.log("Input name attribute: ", inputName);
+
+    const name = e.target.name;    
+    console.log("Input name attribute: ", name);
+
     // Kontrollera om det element som orsakade eventet har 'name'-attributet 'content'
-    if (inputName === 'content') {
+    if (name=== 'content') {
       // Skriv ut värdet i 'content'-inputfältet till det första 'div'-elementet med klassen 'empty_div'
       emptyDiv.innerHTML = e.target.value;
     
     }
-}
-
-checkbox.addEventListener("change",function(e){
-    console.log('chekcbox clicked', e);
-    const colorField = document.getElementById("color");
+   
+    } 
     
-    if (checkbox.checked){
-        emptyDiv.style.backgroundColor=colorField.value;
-    }else{
-        emptyDiv.style.backgroundColor="";
+// uppgit 6 Notera: input-fältet finns redan lagrat i en samling???
+textfields.forEach(textfield=>{
+    if(textfield.name=="color"){
+        box.addEventListener("change",function(){
+            emptyDiv.style.backgroundColor=textfield.value;
+        });
     }
 });
 
-const deleteButton = document.getElementById("deleteButton");
 
-deleteButton.addEventListener("click", function() {
+    
+
+//eventlyssnare till alla textfields
+textfields.forEach((textfield) => textfield.addEventListener("change", handleInputChange));
+   
+
+
+
+
+buttons[0].addEventListener("click", function() {
     emptyDiv.innerHTML = ''; // Detta tar bort allt innehåll inuti div-elementet
 });
 
 
+
+// const deleteButton = document.getElementById("deleteButton");
+
+// const btn = document.getElementsByClassName("button");
+
+ // else if
+   
+    //  (name==="color" && checkbox.checked){
+    //    emptyDiv.style.backgroundColor=e.target.value;
+    // }
+
+
+// checkbox.addEventListener("change",function(e){
+//     console.log('chekcbox clicked', e);
+
+//     // const colorField = document.getElementById("color");
+//     // if (checkbox.checked){
+//     //     emptyDiv.style.backgroundColor=colorField.value;
+//     // }else{
+//     //     emptyDiv.style.backgroundColor="";
+//     // }
+// });

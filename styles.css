@@ -1,34 +1,35 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #292222;
     margin: 0;
-    padding: 0;
+    padding-top: 10rem;
   }
   
   .container {
     width: 80%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #bdabab;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   h1 {
-    font-size: 24px;
+    font-size: 4rem;
     color: #333;
     text-align: center;
   }
   
-  .form-row {
+  .form_row {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-top: 10px;
   }
   
-  .form-row label {
+  .form_row label {
     width: 100px;
     margin-right: 10px;
+    font-weight: 700;
   }
   
   .textfield {
@@ -40,7 +41,7 @@ body {
   }
   
   .checkbox {
-    border: 1px solid #1e1c1c;
+   
   }
   
   .button {
@@ -55,7 +56,7 @@ body {
   
   .empty_div {
     margin-top: 20px;
-    height: 50px; 
+    height: 40px; 
     border: 1px solid #1e1c1c;
   }
   
