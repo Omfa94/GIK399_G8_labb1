@@ -5,7 +5,7 @@ const box = document.getElementById("divStyle");
 //hämta alla element med klassen 'textfield'
 const textfields = document.querySelectorAll(".textfield");
 
-// hämta en HTMLCollection av alla element med klassen button
+// hämta en HTMLCollection av alla element med klassen button??
 
 const buttons = document.getElementsByTagName("button");
 
@@ -39,39 +39,14 @@ textfields.forEach(textfield=>{
 });
 
 
-    
-
 //eventlyssnare till alla textfields
 textfields.forEach((textfield) => textfield.addEventListener("change", handleInputChange));
    
 
 
 
-
 buttons[0].addEventListener("click", function() {
     emptyDiv.innerHTML = ''; // Detta tar bort allt innehåll inuti div-elementet
+    
 });
 
-
-
-// const deleteButton = document.getElementById("deleteButton");
-
-// const btn = document.getElementsByClassName("button");
-
- // else if
-   
-    //  (name==="color" && checkbox.checked){
-    //    emptyDiv.style.backgroundColor=e.target.value;
-    // }
-
-
-// checkbox.addEventListener("change",function(e){
-//     console.log('chekcbox clicked', e);
-
-//     // const colorField = document.getElementById("color");
-//     // if (checkbox.checked){
-//     //     emptyDiv.style.backgroundColor=colorField.value;
-//     // }else{
-//     //     emptyDiv.style.backgroundColor="";
-//     // }
-// });
